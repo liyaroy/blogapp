@@ -3,7 +3,9 @@ services:
   db:
     image: postgres
   webapp:
-    build: ./webapp
+    build: 
+      context: ./webapp
+      dockerfile: Dockerfile-development
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - ./webapp:/webapp

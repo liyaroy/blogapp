@@ -16,5 +16,3 @@ RUN gem install bundler
 RUN bundle update --bundler
 RUN bundle install
 ADD . /webapp
-
-RUN RAILS_ENV=production bundle exec rake assets:precompile
